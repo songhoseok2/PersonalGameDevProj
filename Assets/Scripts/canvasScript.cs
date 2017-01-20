@@ -18,7 +18,6 @@ public class canvasScript : MonoBehaviour
         player = GameObject.Find("player");
         paused = false;
         pauseText.GetComponent<Text>().enabled = paused;
-        quitButton.GetComponent<Button>().interactable = paused;
 
         quitButton.onClick.AddListener(quitListener);
     }
