@@ -1,0 +1,5 @@
+-Cite Audio sources
+-Add title scene + insturcitons
+-Add some sensitivity option for the user in the pause menu
+-Make scripts to win + make stages
+-Make more complex enemies
