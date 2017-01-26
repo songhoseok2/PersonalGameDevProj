@@ -1,0 +1,12 @@
+Background Music: Battle of the shadow Elves - by Chris Haigh
+Dry Fire Gun: SoundBible.com
+enemyDeathSound:Starcraft - Brood War
+gunfire1:SoundBible.com
+gunfire2:SoundBible.com
+Mission Failed We'll get Em Next Time Sound Effect: Call of Duty: Modern Warfare 2
+PlayerDeathSound: Starcraft - Brood War
+reloadingSoundEffect: Youtube - fredyfrankle1
+
+
+
+-------Will eventually have to collaborate with a muscian and an artist for the final product-------

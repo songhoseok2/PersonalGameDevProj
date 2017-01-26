@@ -1,5 +1,4 @@
--Cite Audio sources
 -Add title scene + insturcitons
 -Add some sensitivity option for the user in the pause menu
--Make scripts to win + make stages
+-Make scripts to win + start making legitimate stages of the game
 -Make more complex enemies
