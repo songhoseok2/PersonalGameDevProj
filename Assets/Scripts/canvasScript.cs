@@ -9,6 +9,10 @@ public class canvasScript : MonoBehaviour
     public Text currentAmmoText;
     public Text pauseText;
     public Button quitButton;
+
+    public Text sensitivityText;
+    public Slider sensitivitySlider;
+
     private GameObject player;
 
     [HideInInspector]public bool paused;
@@ -18,6 +22,7 @@ public class canvasScript : MonoBehaviour
         player = GameObject.Find("player");
         paused = false;
         pauseText.GetComponent<Text>().enabled = paused;
+        sensitivityText.GetComponent<Text>().enabled = paused;
 
         quitButton.onClick.AddListener(quitListener);
     }
@@ -34,14 +39,14 @@ public class canvasScript : MonoBehaviour
         {
             paused = !paused;
             UnityEngine.Cursor.visible = paused;
-            //why aren't these two working????????????????????????????
-            //pauseText.GetComponent<Text>().enabled = paused;
-            //quitButton.GetComponent<Button>().interactable = paused;
             quitButton.gameObject.SetActive(paused);
+            sensitivitySlider.gameObject.SetActive(paused);
 
             //why need BOTH for text????
             pauseText.GetComponent<Text>().enabled = paused;
             pauseText.gameObject.SetActive(paused);
+            sensitivityText.GetComponent<Text>().enabled = paused;
+            sensitivityText.gameObject.SetActive(paused);
 
             if (paused)
             {
