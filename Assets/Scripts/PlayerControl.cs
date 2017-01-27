@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class PlayerControl : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     [HideInInspector]public float remainingBooster;
 
     public Canvas canvas;
+    public Slider sensitivitySlider;
 
     void Start()
     {
@@ -28,8 +31,8 @@ public class PlayerControl : MonoBehaviour
 	{
         //transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0) * Time.deltaTime * rotationSensitivity);
 
-        float horizontal = horizontalRotationSensitivity * Input.GetAxis("Mouse X");
-        float vertical = verticalRotationSensitivity * -Input.GetAxis("Mouse Y");
+        float horizontal = sensitivitySlider.value * horizontalRotationSensitivity * Input.GetAxis("Mouse X");
+        float vertical = sensitivitySlider.value * verticalRotationSensitivity * -Input.GetAxis("Mouse Y");
         transform.Rotate(vertical, horizontal, 0);
 
         if (Input.GetKey(KeyCode.W))
