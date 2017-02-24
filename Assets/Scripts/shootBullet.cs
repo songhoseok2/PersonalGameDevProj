@@ -4,6 +4,7 @@ using System.Collections;
 public class shootBullet : MonoBehaviour
 {
     public GameObject Bullet;
+    public GameObject BulletSpawn;
     public GameObject aimLine;
 
     public AudioSource gunfire;
@@ -43,8 +44,8 @@ public class shootBullet : MonoBehaviour
                 if (currentAmmo > 0 && !reloading)
                 {
                     gunfire.Play();
-                    Instantiate(Bullet, transform.position, transform.rotation);
-
+                    Instantiate(Bullet, BulletSpawn.transform.position, BulletSpawn.transform.rotation);
+                    //Time.timeScale = 0.0f;
                     --currentAmmo;
                 }
                 else if (currentAmmo <= 0 || reloading)
